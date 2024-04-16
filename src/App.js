@@ -4,6 +4,7 @@ import Main from "./pages/Main";
 import Navbarpg from "./pages/Navbarpg";
 import Footerpg from "./pages/Footerpg";
 import Form from "./components/Form"
+import Show from "./components/Card";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
         <Navbarpg />
         <Routes>
           <Route path="/" element={<Main />}>
-            <Route path="form" element={<Form/>}/>
+            <Route path="form" element={<Form/>}>
+              <Route path={"/form/show"} element={<Show/>}/>
+            </Route>
           </Route>
         </Routes>
         <Footerpg />

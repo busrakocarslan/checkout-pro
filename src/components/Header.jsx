@@ -5,12 +5,13 @@ const Header = () => {
     const [göster,setGöster]=useState(true)
     const navigate=useNavigate()
     const handleClick=()=>{
-      setGöster(!göster)
       if(göster){
         navigate("form")
       }else{
-        navigate(-1);
+        
+        navigate("");
       }
+      setGöster(!göster)
     }
     
    
